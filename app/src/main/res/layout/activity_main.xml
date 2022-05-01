@@ -1,18 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#8FADE6E6"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tipTopic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="100dp"
+        android:text="Trinkgeld?"
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="250dp"
+        android:text="Trinkgeld"
+        android:textSize="20dp"
+        android:textStyle="italic" />
+
+
+    <EditText
+        android:id="@+id/editTip"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="235dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/tipSum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="300dp"
+        android:text="Im laufendem Monat:"
+        android:textSize="20dp"
+        android:textStyle="italic" />
+
+
+    <TextView
+        android:id="@+id/tipSumResult"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="300dp"
+        android:gravity="end"
+        android:textSize="20dp"
+        android:textStyle="italic" />
+
+
+    <TextView
+        android:id="@+id/tip_added"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="350dp"
+        android:gravity="center"
+        android:text="Das Trinkgeld wurde eingezalt."
+        android:textColor="#63B32B"
+        android:textSize="20dp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/payment"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tip"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="120dp"
+        android:text="Einzahlung" />
+
+    <Button
+        android:id="@+id/ViewTip"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/payment"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="20dp"
+        android:text="Mein Trinkgeld" />
+
+    <Button
+        android:id="@+id/BeginnOfAmonth"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ViewTip"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="20dp"
+        android:text="Monatsanfang" />
+
+</RelativeLayout>
